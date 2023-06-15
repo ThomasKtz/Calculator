@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Kanit', sans-serif;
+    background: rgb(219,94,190);
+background: radial-gradient(circle, rgba(219,94,190,1) 0%, rgba(69,255,247,1) 100%);
+}
+
+.calculator{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 15px;
+
+}
+
+.ecran{
+   height: 200px;
+   width: 100%;
+   background-color: aqua; 
+   border-radius: 10px;
+   margin-bottom: 15px;
+   display: flex;
+   justify-content: flex-end;
+   align-items: flex-end;
+   padding: 10px;
+   font-size: 40px;
+}
+
+.touches{
+    display: grid;
+    grid-template-columns: repeat(4, 75px);
+    grid-template-rows: repeat(5, 75px);
+    grid-gap: 7px;
+}
+
+.button{
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 3px #a8a8a8;
+}
+
+.button:active{
+    box-shadow: 0 1px #a8a8a8;
+    transform: translateY(2px);
+}
+
+button[data-key="8"]{
+    background-color: #ff9900;
+    color: white;
+
+}
+
+button[data-key="13"]{
+    grid-column: span 2;
+    background-color: #36e700;
+    color: white;
+    font-size: 40px;
+}
